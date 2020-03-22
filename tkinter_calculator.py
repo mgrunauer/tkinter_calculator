@@ -230,6 +230,7 @@ def clicked_negative():
     txt_1.config(state=NORMAL)
     if len(txt_1.get('1.0','end')) > 1 and txt_1.get('1.0','end')[0] != "0":
         txt_1.insert('1.0','-')
+    txt_1.config(state=DISABLED)
 
 # Setup Buttons For Functionality
 '''
