@@ -1,6 +1,11 @@
-# tkinter_calculator.py
-# Created by Matthew Grunauer
-# 3/22/2020
+'''
+tkinter_calculator.py
+
+Created by Matthew Grunauer
+3/22/2020
+
+A simple calculator with limited functionality, built using the Tkinter library
+'''
 
 from tkinter import *
 
