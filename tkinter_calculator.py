@@ -1,11 +1,6 @@
-'''
-tkinter_calculator.py
-
-Created by Matthew Grunauer
-3/22/2020
-
-A simple calculator with limited functionality, built using the Tkinter library
-'''
+# tkinter_calculator.py
+# Created by Matthew Grunauer
+# 3/22/2020
 
 from tkinter import *
 
@@ -231,6 +226,10 @@ def clicked_clear():
     txt_1.config(state=DISABLED)
     one_operation = False
     
+def clicked_negative():
+    txt_1.config(state=NORMAL)
+    if len(txt_1.get('1.0','end')) > 1 and txt_1.get('1.0','end')[0] != "0":
+        txt_1.insert('1.0','-')
 
 # Setup Buttons For Functionality
 '''
@@ -269,6 +268,8 @@ btn_0 = Button(fourth_row, text="0", height=1, width=5, command=clicked_btn_0)
 btn_0.pack(side=LEFT)
 btn_equals = Button(third_row, text="=", height=1, width=5, bg='Sienna', command=clicked_equals)
 btn_equals.pack(side=LEFT)
+btn_negative = Button(fourth_row, text='NEG', height=1, width=5, bg='thistle1', command=clicked_negative)
+btn_negative.pack(side=LEFT)
 
 
 # Opens the calculator interface
